@@ -3,10 +3,120 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luis Carlos Carrillo | Desarrollador</title>
+    <meta
+      name="description"
+      content="Portafolio de Luis Carlos Carrillo, analista y desarrollador de software con experiencia en frontend con React y TypeScript."
+    />
+    <title>Luis Carlos Carrillo | Desarrollador de Software</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Luis Carlos Carrillo</h1>
-    <p>Portafolio en construcción.</p>
+    <header class="header">
+      <nav class="nav">
+        <a class="nav__link" href="#sobre-mi">Sobre mí</a>
+        <a class="nav__link" href="#experiencia">Experiencia</a>
+        <a class="nav__link" href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <h1 class="hero__title">Luis Carlos Carrillo</h1>
+        <p class="hero__subtitle">Desarrollador de software</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#contacto">Contactarme</a>
+        </div>
+      </section>
+
+      <section class="about" id="sobre-mi">
+        <h2 class="about__title">Sobre mí</h2>
+        <p class="about__text">
+          Analista y desarrollador de software egresado del SENA, con
+          experiencia práctica en desarrollo frontend de aplicaciones web bajo
+          metodologías ágiles (Scrum). Trabajo con HTML, CSS, JavaScript, React
+          y TypeScript para crear y mantener interfaces de usuario claras y
+          escalables. Durante mis prácticas profesionales en Octopus Inc.
+          participé en la internacionalización de la interfaz, la
+          refactorización de componentes, el desarrollo de vistas de monitoreo
+          y la evaluación de APIs de terceros. Allí aprendí a construir
+          componentes reutilizables que reducen la repetición de código y a
+          aplicar buenas prácticas que hacen los productos más mantenibles.
+        </p>
+      </section>
+
+      <section class="experience" id="experiencia">
+        <h2 class="experience__title">Experiencia</h2>
+        <article class="experience-card">
+          <h3 class="experience-card__title">Practicante R&amp;D</h3>
+          <p class="experience-card__company">Octopus Inc.</p>
+          <p class="experience-card__period">Abril 2025 – Septiembre 2025</p>
+          <ul class="experience-card__list">
+            <li class="experience-card__item">
+              Refactoricé ventanas modales desarrolladas manualmente,
+              reemplazándolas por el componente nativo de diálogo. Esto redujo
+              el código personalizado que había que mantener.
+            </li>
+            <li class="experience-card__item">
+              Aseguré la correcta implementación de la internacionalización
+              (i18n) en las interfaces de usuario (UI), con soporte para inglés
+              y español, validando que las traducciones se aplicaran de forma
+              consistente en todo el aplicativo.
+            </li>
+            <li class="experience-card__item">
+              Implementé el bloqueo de botones que enviaban peticiones al
+              backend mientras la solicitud estaba en proceso, evitando envíos
+              duplicados por clics repetidos o por la duda del usuario sobre si
+              la petición se había enviado.
+            </li>
+            <li class="experience-card__item">
+              Desarrollé dos vistas de monitoreo para un NOC (Network
+              Operations Center) en el frontend, construidas con React y
+              TypeScript, organizando la información en tarjetas con
+              indicadores de estado por color que permitían identificar de un
+              vistazo qué elementos estaban activos, cuáles apagados y cuáles
+              requerían atención.
+            </li>
+            <li class="experience-card__item">
+              Apoyé la evaluación de APIs de terceros (RapidAPI) para analizar
+              qué información entregaban sobre plataformas como YouTube, TikTok
+              y Facebook, realizando pruebas controladas para validar la
+              cobertura y calidad de los datos.
+            </li>
+          </ul>
+          <p class="experience-card__stack">
+            Tecnologías: TypeScript, React
+          </p>
+        </article>
+      </section>
+
+      <section class="contact" id="contacto">
+        <h2 class="contact__title">Contacto</h2>
+        <ul class="contact__list">
+          <li class="contact__item">
+            <a class="contact__link" href="mailto:luiscarrilloto@gmail.com"
+              >Correo</a
+            >
+          </li>
+          <li class="contact__item">
+            <a
+              class="contact__link"
+              href="https://www.linkedin.com/in/luis-carrillo-902399354/"
+              >LinkedIn</a
+            >
+          </li>
+          <li class="contact__item">
+            <a
+              class="contact__link"
+              href="https://github.com/LuisCarlosCarrillo"
+              >GitHub</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">© 2026 Luis Carlos Carrillo</p>
+    </footer>
   </body>
 </html>
