@@ -1,0 +1,35 @@
+@import url(variables.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.theme-toggle__icon--sun {
+  display: none;
+}
+
+.dark .theme-toggle__icon--sun {
+  display: block;
+}
+.dark .theme-toggle__icon--moon {
+  display: none;
+}
+
+body,
+.header,
+.experience-card,
+.education__card,
+.button,
+.theme-toggle {
+  transition:
+    background-color var(--transition-speed),
+    color var(--transition-speed),
+    border-color var(--transition-speed);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}

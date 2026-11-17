@@ -8,3 +8,12 @@
   --transition-speed: 0.3s ease;
 }
 
+.dark {
+  --bg: #0b0f0e;
+  --border: #1f2926;
+  --text: #ededed;
+  --text-muted: #a3a3a3;
+  --primary: #34d399;
+  --primary-hover: #6ee7b7;
+}
+
