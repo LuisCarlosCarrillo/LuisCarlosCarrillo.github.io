@@ -1,14 +1,16 @@
 :root {
+  color-scheme: light;
   --primary: #059669;
   --primary-hover: #047857; 
   --bg: #fff;
   --border: #e5e5e5;
-  --text: #171717;; 
+  --text: #171717;
   --font-main: sans-serif;
   --transition-speed: 0.3s ease;
 }
 
 .dark {
+  color-scheme: dark;
   --bg: #0b0f0e;
   --border: #1f2926;
   --text: #ededed;

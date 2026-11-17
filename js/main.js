@@ -1,14 +1,48 @@
-const root = document.documentElement;
-const boton = document.querySelector(".theme-toggle");
+/* ===== Theme (light / dark) ===== */
+const THEME_KEY = "theme";
+const DARK = "dark";
+const LIGHT = "light";
 
-function synchronizeButton() {
-  boton.setAttribute("aria-pressed", root.classList.contains("dark"));
+const root = document.documentElement;
+const toggleButton = document.querySelector(".theme-toggle");
+const systemDarkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+function getStoredTheme() {
+  try {
+    return localStorage.getItem(THEME_KEY);
+  } catch {
+    return null;
+  }
 }
 
-boton.addEventListener("click", () => {
-  const isDark = root.classList.toggle("dark");
-  localStorage.setItem("theme", isDark ? "dark" : "light");
-  synchronizeButton();
-});
+function storeTheme(theme) {
+  try {
+    localStorage.setItem(THEME_KEY, theme);
+  } catch {}
+}
 
-synchronizeButton();
+function applyTheme(theme) {
+  const isDark = theme === DARK;
+  root.classList.toggle(DARK, isDark);
+  toggleButton.setAttribute("aria-pressed", String(isDark));
+}
+
+function handleToggleClick() {
+  const nextTheme = root.classList.contains(DARK) ? LIGHT : DARK;
+  applyTheme(nextTheme);
+  storeTheme(nextTheme);
+}
+
+function handleSystemThemeChange(event) {
+  if (!getStoredTheme()) {
+    applyTheme(event.matches ? DARK : LIGHT);
+  }
+}
+
+function initTheme() {
+  applyTheme(root.classList.contains(DARK) ? DARK : LIGHT);
+  toggleButton.addEventListener("click", handleToggleClick);
+  systemDarkQuery.addEventListener("change", handleSystemThemeChange);
+}
+
+initTheme();
